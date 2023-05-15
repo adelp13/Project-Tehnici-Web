@@ -1,20 +1,21 @@
 body {
     overflow: auto;
     font-size: 12px;
-    background: linear-gradient(180deg, #12043b, #ff9800, #f44336, #3f51b5);
+    background: linear-gradient(180deg, #12043b, #1c0512, #2f0b45, #0e1749);
 }
 
-header img{
-    position: fixed;
-    width: 20%;
-    right: 0px;
-    top: 0px;
-    float: right;
-    opacity: 0.7;
+aside img{
+    width: 100%;
+    opacity: 0.8;
+    z-index : 1;
 }
 .meniu li:hover  .submeniu {
     display: block;
 }
+.meniu li:hover {
+    font-weight: 800;
+}
+
 
 .submeniu {
     margin-left: -2.50rem;
@@ -22,61 +23,100 @@ header img{
 }
 
 nav {
-    height: 12rem;
     position: sticky;
     top: 1rem;
 }
 
-.meniu {
-    margin-left: -20px;
-}
+
 
 ul {
     list-style-type: none;
 }
 .meniu li {
-    background-color: black;
-    color: white;
+    background-color: rgb(194, 172, 172);
+    color: rgb(37, 31, 31);
     width: 20%;
     height: 35px;
     text-align: center;
+    font-size: 15px;
+    font-weight: 500;
     vertical-align: middle;
+    border-radius: 5px;
     display: inline-block;
 }
 .meniu li li {
     width: 100%;
 }
 
-
-span {
-    margin-top: 10px;
-    margin-bottom: 100px;
+h2, h1, p, h3, h4, table {
+    color: rgba(226, 183, 183, 0.849);
+}
+  
+tr,td {
+    border: 1px dotted rgb(0, 255, 153);
 }
 
-h1 {
-    color: rgba(192, 171, 171, 0.849);
+table {
+    border-collapse: collapse;
 }
-
 footer {
     height: 60px;
-    margin-top: -18px;
+    margin-top: 18px;
 }
 
 
 aside {
-    position: absolute;
-    float: right;
-    width: 20%;
-    height: 800vh;
-    top: 0px;
-    right: 0px;
-    background: linear-gradient(150deg, #1e2589, #1e987c, #85176d, #3f51b5);
+    height: 100vh;
+    background-color:rgba(160, 162, 195, 0.849);
     border: 0.5rem solid gray;
     box-sizing: border-box;
+    right: 0px;
+    top: 0px;
+    width: 20%;
+    margin-left: 2px;
+    float: right;
+    font-style: italic;
+    background-color: lightgray;
+}
+
+aside h2 {
+    color:rgba(239, 216, 216, 0.849);
+    right: 0px;
+    margin-top: 0px;
+    float: left;
+    z-index: 3;
+
 }
 
 #continut{
+    
     width: 100%;
     height: 1000vh;
 
 }
+p, tr, td {
+    font-size: 15px;
+}
+h3::first-letter, h1::first-letter {
+    color:rgb(24, 176, 87);
+    font-size: 120%;
+}
+
+td:nth-of-type(3n+1) {
+    font-weight: bolder;
+}
+
+td:nth-of-type(3n+1):hover {
+    color:rgb(0, 255, 153);
+}
+
+#tabel tr:nth-child(2) td:nth-child(3) {
+    font-weight: 600;
+    color:rgba(160, 162, 195, 0.849);
+}
+
+@media (max-width: 200px) {
+    h2{
+      font-size: 8px;
+    }
+  }
