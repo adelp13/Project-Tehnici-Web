@@ -10,11 +10,15 @@ aside img{
     border-radius: 5px;
     transition: 2s;
 }
+aside h3~div img {
+    width: 80%;
+}
 
-aside img:hover{
+aside:hover img{
     border-radius: 0px;
     opacity: 1;
 }
+
 .meniu li:hover  .submeniu {
     display: block;
 }
@@ -82,7 +86,7 @@ footer {
 
 
 aside {
-    height: 100vh;
+    
     background-color:rgba(160, 162, 195, 0.849);
     border: 0.5rem solid gray;
     box-sizing: border-box;
@@ -266,4 +270,30 @@ article:first-of-type section:last-of-type {
 
 #reduceri_flex {
     display: flex;
+	flex-direction: column;
+    align-items: center;
 }
+#reduceri_flex h3{
+    color:#1c1239;
+}
+#reduceri_flex div img {
+    display: none;
+}
+#reduceri_flex div:hover img{
+    display: block;
+}
+
+#reduceri_flex div:nth-of-type(2n){
+    color:rgba(73, 154, 81, 0.849)
+}
+#reduceri_flex div:nth-of-type(2n+1){
+    color:rgba(73, 87, 154, 0.849)
+}
+
+#curierat span{
+    visibility:hidden;
+}
+#curierat h3:hover span{
+    visibility: visible;
+}
+
