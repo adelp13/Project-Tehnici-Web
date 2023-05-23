@@ -1,4 +1,4 @@
-:not(#formular_review) section  h3~p::before, #curierat  div~p::before {
+ section h3~p:not(#reviews_container div p)::before, #curierat  div~p::before {
     content: '--';
     margin-right: 2px;
     color:rgb(0, 255, 153);

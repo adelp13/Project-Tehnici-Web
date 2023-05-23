@@ -26,17 +26,15 @@ window.onload = () => {
     likeCheck = 1 - likeCheck;
   };
 
-  const form = document.getElementById('formular_review');
-
   const reviewsContainer = document.querySelector('#reviews_container');
-
-  reviewsContainer.addEventListener('click', (e) => {
+  reviewsContainer.addEventListener('dblclick', (e) => {
       const divList = reviewsContainer.querySelectorAll('div');
       divList.forEach(element => {
         element.remove();
       });
   });
 
+  const form = document.getElementById('formular_review');
   form.addEventListener('submit', (e) => {
       e.preventDefault();
       const new_review = document.createElement('div');
@@ -57,16 +55,36 @@ window.onload = () => {
         sp.innerHTML += '&star;';
       }
       p = document.createElement('p');
-      p.textContent = continut_review;
+      let r = randomValue(200);
+      let b = randomValue(200);
+      let g = randomValue(200);
+      if (criteriu == 'servicii curierat') r = 255;
+      else if (criteriu == 'calitate produse') g = 255;
+      else b = 255;
+  
+      if (continut_review.length > 40){
+          p.textContent = continut_review.substr(0, 40);
+          alert('Continutul review-ului nu poate depasi 40 de caractere!');
+      }
+      else p.textContent = continut_review;
+
+      p.style.color = `rgb(${r}, ${g}, ${b})`;
+      h3.style.color = `rgb(${r}, ${g}, ${b}, 0.5)`;
+      h3.style.fontWeight = '800';
       sp.style.color = "rgba(226, 183, 183, 0.849)";
+      sp.style.align = 'middle';
       h3.innerHTML = 'Criteriu selectat: ' + criteriu;
       new_review.append(h3, sp, p);
       document.querySelector('#reviews_container').append(new_review);
 
-      new_review.addEventListener('click', (e) => {
+      new_review.addEventListener('dblclick', (e) => {
         e.stopPropagation(); 
         new_review.remove();
       });
+
+      function randomValue(maxim) {
+        return Math.floor(Math.random() * maxim);
+      }
     });
 }
 
