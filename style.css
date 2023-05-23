@@ -3,8 +3,31 @@ body {
     font-size: 12px;
     background: linear-gradient(180deg, #070218, #1c0512, #2f0b45, #0e1749);
 }
+input, option, select, textarea{
+    background-color:#ccf2e3;
+}
 
 
+.reviews {
+    border-top: 3px solid rgb(152, 224, 224);
+    border-bottom: 3px solid rgb(152, 224, 224);
+    border-left: 1px dashed rgba(45, 50, 145, 0.849);
+    border-right: 1px dashed rgba(45, 50, 145, 0.849);
+    margin: 0.6em;
+    padding: 0.2em;
+}
+#formular_review {
+    width: calc(50% + 10em);
+}
+#formular_review label {
+    color:#7affca;
+}
+
+#reviews_container {
+    display: flex;
+    margin-top: 0.4em;
+    flex-wrap: wrap;
+}
 #like_button {
         background: #7affca;
         width: 8em;
@@ -14,6 +37,7 @@ body {
         color:rgba(152, 31, 165, 0.849);
         font-weight: 700;
 }
+
 aside img{
     width: 100%;
     opacity: 0.7;
@@ -64,7 +88,7 @@ ul {
     list-style-type: none;
 }
 .meniu li {
-    background-color: rgb(194, 172, 172);
+    background-color: rgb(181, 141, 141);
     color: rgb(37, 31, 31);
     width: 20%;
     height: 35px;
@@ -82,7 +106,7 @@ ul {
     margin-bottom: -16px;
 }
 
-h2, h1, p, h3, h4, table {
+h2, h1, p, h3, h4, table{
     color: rgba(226, 183, 183, 0.849);
 }
   
@@ -121,7 +145,8 @@ aside {
 section > p, tr, td {
     font-size: 15px;
 }
-h3::first-letter, h1::first-letter {
+
+h3:not(#reviews_container h3)::first-letter, h1::first-letter {
     color:rgb(24, 176, 87);
     font-size: 120%;
 }
@@ -209,113 +234,4 @@ header h1:first-of-type {
 }
 header h1:last-of-type {
     margin-top: 20px;
-}
-
-section  h3~p::before, #curierat  div~p::before {
-    content: '--';
-    margin-right: 2px;
-    color:rgb(0, 255, 153);
-}
-
-article:first-of-type section:last-of-type {
-    border-left: 2px solid slategrey;
-    padding-left: 2em;
-    margin-left: 1em;
-}
-
-#produse_cautate_grid div:first-child{
-    grid-area: item1;
-    background-image: url("grid1.jpg");
-    background-size: cover;
-}
-#produse_cautate_grid div:nth-child(2){
-    grid-area: item2;
-    background-image: url("grid2.jpg");
-    background-size: cover;
-}
-#produse_cautate_grid  div:nth-child(3){
-    grid-area: item3;
-    background-image: url("grid3.jpg");
-    background-size: cover;
-}
-#produse_cautate_grid div:nth-child(4){
-    grid-area: item4;
-    background-image: url("grid4.jpg");
-    background-size: cover;
-}
-#produse_cautate_grid div:nth-child(5){
-    grid-area: item5;
-    background-image: url("grid5.jpg");
-    background-size: cover;
-}
-#produse_cautate_grid div:nth-child(6){
-    grid-area: item6;
-    background-image: url("grid6.jpg");
-    background-size: cover;
-}
-#produse_cautate_grid div:nth-child(7){
-    grid-area: item7;
-    background-image: url("grid7.jpg");
-    background-size: cover;
-}
-#produse_cautate_grid div:nth-child(8){
-    grid-area: item8;
-    background-image: url("grid9.jpg");
-    background-size: cover;
-}
-#produse_cautate_grid div:last-child{
-    grid-area: item9;
-    background-image: url("grid10.jpg");
-    background-size: cover;
-}
-#produse_cautate_grid div{
-    border: 1px solid rgba(17, 97, 154, 0.8);
-}
-#produse_cautate_grid div img{
-    width: 100%;
-}
-#produse_cautate_grid {
-    display: grid;
-    width: 40em;
-    height: 40em;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: 
-    "item5 . item2 item9"
-    ". item1 item1 item6"
-    "item4 item1 item1 ."
-    "item8 item3 . item7";
-}
-
-#reduceri_flex {
-    display: flex;
-	flex-direction: column;
-    align-items: center;
-}
-#reduceri_flex h3{
-    color:#1c1239;
-}
-#reduceri_flex div img {
-    display: none;
-}
-#reduceri_flex div:hover img{
-    display: block;
-}
-
-#reduceri_flex div:nth-of-type(2n){
-    color:rgba(73, 154, 81, 0.849)
-}
-#reduceri_flex div:nth-of-type(2n+1){
-    color:rgba(73, 87, 154, 0.849)
-}
-
-#curierat span{
-    visibility:hidden;
-}
-#curierat h3:hover span{
-    visibility: visible;
-}
-
-#reduceri_flex h3:first-child + div {
-    font-weight: 800;
 }

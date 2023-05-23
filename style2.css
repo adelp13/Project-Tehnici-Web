@@ -1,0 +1,108 @@
+:not(#formular_review) section  h3~p::before, #curierat  div~p::before {
+    content: '--';
+    margin-right: 2px;
+    color:rgb(0, 255, 153);
+}
+
+article:first-of-type section:last-of-type {
+    border-left: 2px solid slategrey;
+    padding-left: 2em;
+    margin-left: 1em;
+}
+
+#produse_cautate_grid div:first-child{
+    grid-area: item1;
+    background-image: url("grid1.jpg");
+    background-size: cover;
+}
+#produse_cautate_grid div:nth-child(2){
+    grid-area: item2;
+    background-image: url("grid2.jpg");
+    background-size: cover;
+}
+#produse_cautate_grid  div:nth-child(3){
+    grid-area: item3;
+    background-image: url("grid3.jpg");
+    background-size: cover;
+}
+#produse_cautate_grid div:nth-child(4){
+    grid-area: item4;
+    background-image: url("grid4.jpg");
+    background-size: cover;
+}
+#produse_cautate_grid div:nth-child(5){
+    grid-area: item5;
+    background-image: url("grid5.jpg");
+    background-size: cover;
+}
+#produse_cautate_grid div:nth-child(6){
+    grid-area: item6;
+    background-image: url("grid6.jpg");
+    background-size: cover;
+}
+#produse_cautate_grid div:nth-child(7){
+    grid-area: item7;
+    background-image: url("grid7.jpg");
+    background-size: cover;
+}
+#produse_cautate_grid div:nth-child(8){
+    grid-area: item8;
+    background-image: url("grid9.jpg");
+    background-size: cover;
+}
+#produse_cautate_grid div:last-child{
+    grid-area: item9;
+    background-image: url("grid10.jpg");
+    background-size: cover;
+}
+#produse_cautate_grid div{
+    border: 1px solid rgba(17, 97, 154, 0.8);
+}
+#produse_cautate_grid div img{
+    width: 100%;
+}
+#produse_cautate_grid {
+    display: grid;
+    width: 40em;
+    height: 40em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "item5 . item2 item9"
+    ". item1 item1 item6"
+    "item4 item1 item1 ."
+    "item8 item3 . item7";
+}
+
+#reduceri_flex {
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+}
+#reduceri_flex h3{
+    color:#1c1239;
+}
+#reduceri_flex div img {
+    display: none;
+}
+#reduceri_flex div:hover img{
+    display: block;
+}
+
+#reduceri_flex div:nth-of-type(2n){
+    color:rgba(73, 154, 81, 0.849)
+}
+#reduceri_flex div:nth-of-type(2n+1){
+    color:rgba(73, 87, 154, 0.849)
+}
+
+#curierat span{
+    visibility:hidden;
+}
+#curierat h3:hover span{
+    visibility: visible;
+}
+
+#reduceri_flex h3:first-child + div {
+    font-weight: 800;
+}

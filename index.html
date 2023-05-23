@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <title>Magazin de electronice</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style2.css">
     <script src="javascript.js"></script>
 </body>
     
@@ -178,6 +179,21 @@
           produs achizitionat. Poti alege daca review-ul tau va fi vizibil pentru toti vizitatorii acestui site sau doar
           pentru personalul magazinului. 
         </p>
+        <form id="formular_review">
+            <label> <span>Criteriu: </span>
+              <select id="criteriu">
+                  <option value="servicii_curierat"> Servicii curierat </option>
+                  <option value="calitate_produse"> Calitatea produselor </option>
+                  <option value="amabilitate_angajati"> Amabilitatea angajatilor </option>
+              </select> 
+            </label>
+            <label> <span>Numar stele: </span><input id="nr_stele" type="number" max="10" min="0" value ="0"/></label><br>
+            <textarea id="continut_review" placeholder="Continut review..." rows="2" cols="30"> Continut review...</textarea><br>
+            <input type="reset"/>
+            <input type="submit">
+        </form><br>
+        <div id="reviews_container">
+        </div>
       </section>
 
     </article>
