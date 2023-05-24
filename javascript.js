@@ -38,7 +38,6 @@ window.onload = () => {
 
   const comanda_form = document.getElementById('comanda');
   comanda_form.addEventListener('submit', (e) => { comandaNoua(e); //cand se trimite o noua comanda
-  showConfirmation();
   });
   const lista_comenzi = document.getElementById('lista_comenzi');
   lista_comenzi.addEventListener('click', (e) =>{ deleteOrders(e);}); 
@@ -167,7 +166,7 @@ function comandaNoua(e) {
     alert('Produsul nu este valabil!');
     return;
   }
-  
+  showConfirmation(); //comanda e valida, deci va fi procesata
   const li = document.createElement('li');
   li.textContent = `Ati comandat produsul avand codul: ${cod_prod}, numar de bucati: ${nr_buc}`;
   lista_comenzi.appendChild(li);
