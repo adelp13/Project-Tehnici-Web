@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
+  <meta charset="utf-8">
+  <title>Magazin de electronice</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style2.css">
+  <script src="javascript.js"></script>
 </head>
-<body>
-    <meta charset="utf-8">
-    <title>Magazin de electronice</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style2.css">
-    <script src="javascript.js"></script>
-</body>
-    
+<body> 
     <header>
        <h1> ELECTROLIGHT </h1> <br><h1> Produse la cel mai bun pret </h1>
        <button id ="like_button"> Like </button>
@@ -69,13 +67,12 @@
         <li><span>Ce avem in stoc</span>
             <ul class="submeniu">
               <a href="#best_items"><li>Cele mai cautate produse</li></a>
-              <a href="#all_items"><li>Toate produsele</li></a>
               <a href="#curier"><li>Detalii curierat</li></a>
+              <a href="#comanda_pr"><li>Comanda un produs</li></a>
             </ul>
         </li>
         <li><span>Review-uri</span>
           <ul class="submeniu">
-            <a href="#review"><li>Citeste review-urile</li></a>
             <a href="#scrie"><li>Scrie un review</li></a>
           </ul>
         </li>
@@ -158,8 +155,18 @@
         <p> Pachetul va fi trimis de la cel mai apropiat sediu disponibil, astfel ca pachetele cu destinatia
           pe teritoriul tarii vor ajunge in mai putin de 3 zile lucratoare.
         </p>
-        <br>
-          Comanda un produs
+      </section>
+      <a name="comanda_pr"></a><br><br><br>
+      <section>
+        <h3>Comanda un produs</h3>
+        <form id="comanda">
+          <label for="cod_produs">Codul produsului: </label>
+          <input type="number" id="cod_produs" placeholder="ex: 231" required>
+          <label>Nr de bucati:</label>
+          <input type="number" id="nr_bucati" value = "1" min="1"><br>
+          <button type="submit">Submit</button>
+        </form>
+        <ul id="lista_comenzi" ></ul>
       </section>
         </div>
     </article>
@@ -168,9 +175,10 @@
       <h2>Review-uri</h2>
       <a name="scrie"></a>
       <section>
-        <h3>Citeste Review-urile</h3>
-        <p>Intotdeauna am tinut cont de parerile clientilor nostri si ne-am modificat strategiile de marketing in functiile de nevoile setInterval
-          dorintele acestora. 
+        <h3>Importanta review-urilor</h3>
+        <p>Intotdeauna am tinut cont de parerile clientilor nostri si ne-am modificat strategiile de marketing in functiile de nevoile
+          dorintele acestora. Lucram in fiecare zi pentru a face experienta cumparatorilor cat mai buna si pentru a promova utilizarea electronicelor, mai ales 
+          a telefoanelor si laptopurilor in scop educativ.
         </p>
       </section>
       <section>
@@ -188,16 +196,18 @@
               </select> 
             </label>
             <label> <span>Numar stele: </span><input id="nr_stele" type="number" max="10" min="0" value ="0"/></label><br>
-            <textarea id="continut_review" placeholder="Continut review..." rows="2" cols="30"> Continut review...</textarea><br>
-            <input type="reset"/>
-            <input type="submit">
+            <textarea required id="continut_review" placeholder="Continut review..." rows="2" cols="30"> Continut review...</textarea><br>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
         </form><br>
         <div id="reviews_container">
         </div>
+        <br>
       </section>
 
     </article>
     </main>
-    <footer> </footer>
     
+    <footer> </footer>
+  </body>
 </html>

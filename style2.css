@@ -85,7 +85,12 @@ article:first-of-type section:last-of-type {
 #reduceri_flex div img {
     display: none;
 }
-#reduceri_flex div:hover img{
+
+#reduceri_flex div:hover img {
+    display: block;
+}
+
+#reduceri_flex div .show img {
     display: block;
 }
 
@@ -105,4 +110,17 @@ article:first-of-type section:last-of-type {
 
 #reduceri_flex h3:first-child + div {
     font-weight: 800;
+}
+
+.list_comanda{
+    color:rgb(167, 191, 210);
+    font-size: 15px;
+    margin: 1em;
+    background-color:rgba(86, 8, 55, 0.8);
+}
+
+#lista_comenzi {
+    margin: 3em;
+    background:rgb(43, 4, 34);
+    width: calc(50% + 3em);
 }
