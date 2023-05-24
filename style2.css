@@ -82,16 +82,15 @@ article:first-of-type section:last-of-type {
 #reduceri_flex h3{
     color:#1c1239;
 }
-#reduceri_flex div img {
-    display: none;
-}
+
 
 #reduceri_flex div:hover img {
     display: block;
 }
 
-#reduceri_flex div .show img {
-    display: block;
+.show{
+    display: none;
+    
 }
 
 #reduceri_flex div:nth-of-type(2n){
